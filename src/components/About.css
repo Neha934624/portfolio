@@ -1,0 +1,251 @@
+.about {
+  background: white;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 4rem;
+  margin-bottom: 4rem;
+}
+
+.about-header {
+  margin-bottom: 2rem;
+}
+
+.achievement-badges {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.achievement-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(102, 126, 234, 0.1);
+  border: 1px solid rgba(102, 126, 234, 0.2);
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.achievement-badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+}
+
+.achievement-badge .badge-icon {
+  font-size: 1rem;
+}
+
+.about-text h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #1e293b;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  color: #64748b;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 16px;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-item::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transform: rotate(45deg);
+  animation: shine 3s infinite;
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+.stat-subtitle {
+  font-size: 0.8rem;
+  opacity: 0.8;
+  font-style: italic;
+}
+
+.strengths-section h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: #1e293b;
+  text-align: center;
+}
+
+.strengths-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.strength-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.strength-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.strength-card:hover::before {
+  transform: scaleX(1);
+}
+
+.strength-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.strength-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.strength-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.strength-highlight {
+  background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.strength-card h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #1e293b;
+}
+
+.strength-card p {
+  color: #64748b;
+  line-height: 1.6;
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-100%) translateY(-100%) rotate(45deg);
+  }
+  100% {
+    transform: translateX(100%) translateY(100%) rotate(45deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .stat-item {
+    padding: 1.5rem;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  .strengths-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .achievement-badges {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-text h3,
+  .strengths-section h3 {
+    font-size: 1.5rem;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+  }
+
+  .achievement-badges {
+    flex-direction: column;
+    align-items: center;
+  }
+} 
