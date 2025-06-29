@@ -2,7 +2,7 @@
   "name": "neha-portfolio",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://neha934624.github.io/neha-portfolio",
+  "homepage": "https://neha934624.github.io/portfolio",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
